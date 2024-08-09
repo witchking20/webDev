@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creat DB</title>
+</head>
+<body>
+    <h1>학생 정보 등록</h1>
+    <form id="registerForm">
+        <label for="student_name">이름:</label>
+        <input type="text" id="student_name" name="student_name" required><br><br>
+        <label for="birth">생년월일:</label>
+        <input type="date" id="birth" name="birth" required><br><br>
+        <label for="gender">성별:</label>
+        <select id="gender" name="gender" required>
+            <option value="남">남</option>
+            <option value="여">여</option>
+        </select><br><br>
+        <label for="intro">자기소개:</label>
+        <textarea id="intro" name="intro" required></textarea><br><br>
+        <button type="submit">등록</button>
+    </form>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const student_name = document.getElementById('student_name').value;
+            const birth = document.getElementById('birth').value;
+            const gender = document.getElementById('gender').value;
+            const intro = document.getElementById('intro').value;
+
+            const response = await fetch('/students', {
+                // fetch : 해당 요청을 했을 때 응답을 나타낸다.
+                // '/students'경로로 데이터를 보내고 {}의 형식으로 ...
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ student_name, birth, gender, intro })
+            }); // 서버에 데이터를 보내고 반환된 Promise 반환값을 받는 response 설정
+
+            if (response.ok) {// 응답이 왔다면 ...
+                const result = await response.json();
+                // alert(`학생 정보가 등록되었습니다. ID: ${result.id}`);
+                alert(`학생 정보가 등록되었습니다. result: ${result.student_name}`);
+            } else {
+                alert('등록 중 오류가 발생했습니다.');
+            }
+        });
+    </script>
+
+</body>
+</html>
