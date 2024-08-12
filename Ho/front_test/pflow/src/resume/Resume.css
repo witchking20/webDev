@@ -1,0 +1,380 @@
+ 
+  
+  /* Resume 1,2,3,4,5  최상위에서 태그  전체 사이즈를 정의*/
+
+  .container {
+    width: 1920px;
+    height: 1300px;
+    display: flex;
+    justify-content: center; /* 수평 중앙 정렬 */
+    position: relative;
+  }
+
+  .form1-5 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 980px;
+    height: 1300px;
+    text-align: center;
+    position: relative; /* 폼 위치 조정 */
+    top: 70px; /* 상단 내비바 높이만큼 하단으로 이동 */
+  }
+
+  /* Resume 2,3,4 제목  1, 5는 클래스명 분리해야할듯 */
+  .h1 {                 
+    font-size: 28px;
+    margin: 30px;
+    text-align: center;
+  }
+
+/* Resume Resume3 본문 소제목 */
+  .h3-1 {
+    margin: 20px;
+    text-align: left;
+  }
+
+  .h3-2 {
+    margin: 20px;
+    margin-top: 180px;
+    text-align: left;
+  }
+
+  /* Resume 2,3,4 작성틀 태그 */
+  .Form { 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px; /* 모서리 둥글게 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 980px;
+    height: 640px;
+    text-align: center;
+    position: relative; /* 폼 위치 조정 */
+    top: 70px; /* 상단 내비바 높이만큼 하단으로 이동 */
+  }
+
+
+.tableForm, .tableForm2 {
+  margin-top: 30px;
+  width: 100%;
+  border-collapse: collapse;  
+  position: absolute;
+  left: 52%;
+  transform: translateX(-50%);
+}
+
+.tableForm {
+  top: 140px;
+  
+}
+
+.tableForm2 {
+  top: 340px;
+}
+
+.tableForm th, .tableForm2 th,
+.tableForm td, .tableForm2 td {
+  padding: 10px;
+  text-align: left;
+}
+
+.tableForm th, .tableForm2 th {  /* table header */
+  width: 10%; /* table 기준 13% */
+  color: black;
+}
+
+.tableForm td, .tableForm2 td {  /* table data */
+  width: 40%;
+}
+
+/* Resume 2,3,4 본문 input 속성 */
+.tableForm input[type="text"],
+.tableForm select,
+.tableForm input[type="email"],
+.tableForm input[type="tel"],
+.tableForm input[type="date"],
+
+/* Resume 3의 2번째 테이블 속성*/
+.tableForm2 input[type="text"],
+.tableForm2 select,
+.tableForm2 input[type="email"],
+.tableForm2 input[type="tel"],
+.tableForm2 input[type="date"] {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+  
+  /* input type=file의 기본설정값 없애기 */
+  .tableForm input[type="file"] {
+    display: none;
+  }
+
+  
+
+  /* 파일 업로드 버튼 커스텀 속성 */ 
+  .file-btn {
+    display: inline-block;
+  width: 60px; /* 버튼의 너비 */
+  height: 60px; /* 버튼의 높이 */
+  background-color: black; /* 버튼 배경색 */
+  color: white; /* 텍스트 색상 */
+  border-radius: 5px; /* 버튼을 원형으로 만들기 */
+  text-align: center; /* 텍스트를 중앙에 정렬 */
+  line-height: 60px; /* 텍스트를 수직 중앙에 정렬 */
+  font-size: 24px; /* 텍스트 크기 */
+  user-select: none; /* 텍스트 선택 방지 */
+  }
+
+ 
+  .submit{
+    position: absolute;
+    bottom: 0; /* 부모 요소의 맨 아래에 위치 */
+    left: 55%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 가로 중앙 정렬 보정 */
+    background-color: #393939;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+    transition: background-color 0.3s;
+  }
+
+ /* Resume 2,3,4 초기화 버튼 속성 */
+  .delete { 
+    position: absolute;
+    bottom: 0; /* 부모 요소의 맨 아래에 위치 */
+    left: 45%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 가로 중앙 정렬 보정 */
+    background-color: #0554f2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12pt;
+    transition: background-color 0.3s;
+  }
+  
+  
+  /* 4페이지 문구추천 css */
+
+ .area {
+  display: flex;
+  gap: 100px; /* 자식 요소 간의 간격 조정 */
+  align-items: center; /* 수직 정렬 */
+}
+
+  .recommend-area {
+    margin-left: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 320pt;
+  }
+  
+  .write-area {
+   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column; /* 자식 요소들을 수직으로 배치 */
+    gap: 10px; /* 자식 요소 간의 간격 조정 */
+  }
+
+
+  .write-area input[type="title"]{
+    width: 280pt;
+    height: 30pt;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+
+  .write-area textarea[type="text"]{
+    width: 280pt;
+    height: 280pt;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; 
+  }
+
+
+ /* 1, 5 페이지 탬플릿 /최종 결과 이력서 css*/
+/* 이력서 전체 레이아웃 */
+.resume-container {
+  font-family: 'Arial';
+  margin: 0 auto; /* 중앙 정렬 */
+  padding: 20px;
+  
+  background-color: #ffffff; /* 최종이력서 배경 */
+  width: 680px; /* 고정된 너비 */
+  height: 900px; /* 고정된 높이 */
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 전체 크기 계산 */
+  overflow: auto; /* 내용이 넘칠 경우 스크롤 표시 */
+}
+
+/* 헤더 섹션 이미지, 이름, 연락처 영역 */
+.resume-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-bottom: 15px; /* 학력 섹션과의 간격 */
+}
+
+.resume-header1 {
+  text-align: center; /* 이름이랑 이미지 영역 */
+  margin-left: 10px;
+}
+
+.resume-header1 img {
+  max-width: 80px; /* 이미지 최대 너비 */
+  height: auto;
+}
+
+.resume-header1 h1 { /* 이력서 이름 영역 */
+  font-size: 12pt; /* 고정된 폰트 크기 */
+  margin: 0;
+}
+
+.resume-header1 p { /* 이력서 이름 영역 안에 생년월일 */
+  font-size: 8pt; /* 고정된 폰트 크기 */
+  color: #666;
+  margin: 5px 0 0;
+}
+
+.resume-header2 {
+  margin-right: 30px;
+  text-align: left;
+}
+
+.resume-header2 h2 {
+  text-align: center;
+  font-size: 12pt; /* 고정된 폰트 크기 */
+  margin-bottom: 8px;
+}
+
+.resume-header2 p {
+  text-align: left;
+  font-size: 10pt; /* 고정된 폰트 크기 */
+  color: #333;
+  margin: 2px 0;
+}
+
+.resume-section {
+  margin-top: 15px; /* 상단 여백 조정 */
+}
+
+.resume-section h3 {
+  font-size: 10pt; /* 고정된 폰트 크기 */
+  padding-top: 5px;
+  margin-top: 10px;
+}
+
+
+/* 테이블 자기소개서 소제목*/
+.resume-section th, .resume-section td {
+  padding: 4px; /* 셀 패딩을 줄여서 간격을 더 좁힘 */
+  text-align: left;
+  font-size: 8pt; /* 고정된 폰트 크기 */
+}
+
+/* 테이블 스타일 */
+.resume-table {
+  width: 100%; /* 전체 너비 */
+  border-collapse: collapse; /* 테두리 겹침 방지 */
+  margin-top: 10px;
+}
+
+/* 테이블 헤더 스타일 */
+.resume-table th {
+  width: 20%; /* 각 헤더 셀 너비를 테이블 너비의 20%로 설정 */
+  padding: 4px; /* 셀 패딩 조정 */
+  text-align: left;
+  font-size: 10px; /* 고정된 폰트 크기 */
+  border: 1px solid #ddd; /* 셀 테두리 추가 */
+}
+
+/* 테이블 데이터 셀 스타일 */
+.resume-table td {
+  padding: 4px; /* 셀 패딩 조정 */
+  text-align: left;
+  font-size: 8pt; /* 고정된 폰트 크기 */
+ 
+}
+
+
+
+
+
+/* 1페이지 탬플릿 양식 테마 선택 버튼 스타일 */
+
+.color-btn {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; /* 부모 요소 내에서 수평 가운데 정렬 */
+  align-items: center; /* 부모 요소 내에서 수직 가운데 정렬 (선택 사항) */
+  gap: 10px; /* 버튼들 사이에 간격 추가 */
+}
+
+.blue-sample {
+  background-color: #0554f2;
+  color: white;
+  border: none;
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50%;
+  font-size: 10pt;
+}
+
+.noncolor-sample {
+  background-color: none;
+  border: none;
+  width: 50pt;
+  height: 50pt;
+  border-radius: 50%;
+  font-size: 10pt;
+}
+
+
+/* 정보 없음 메시지 */
+p {
+  font-size: 1.2em;
+  color: #666;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Resume 5 출력버튼 */
+.Export-btn {
+  width: 80px;
+  height: 40px;
+  position: absolute; /* 절대 위치 지정 */
+  top: 50px; /* 하단에 위치 */
+  left: 860px; /* 왼쪽에 위치 */
+  background-color: #0554f2; /* 배경 색상 */
+  color: white; /* 텍스트 색상 */
+  border-radius: 5px; /* 둥근 모서리 */
+  border: none;
+  font-size: 12pt; /* 폰트 크기 */
+}
+
+
+/* table {  이전 이력서 css..
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #3f56e8;
+}
+  */
